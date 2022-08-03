@@ -62,6 +62,18 @@ public class TenisuController {
         return countryRepository.save(country);
     }
 
+    @GetMapping("/players/avg-imc")
+    public Object getAvgImc()
+    {
+        Object obj = null;
+        List<Object[]> list = playerRepository.getAvgImc();
+        if(!list.isEmpty() && list.get(0).length > 0){
+            obj = list.get(0)[0];
+        }
+
+        return obj;
+    }
+
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<Object> handleException() {
         return ResponseEntity.internalServerError().body("Le serveur rencontre des difficultes!");

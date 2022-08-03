@@ -1,9 +1,6 @@
 package com.latelier.tall.tenisu.dto;
 
 import java.util.Collection;
-import java.util.List;
-
-import com.latelier.tall.tenisu.model.Country;
 
 public class PlayerDto {
     private String firstname;

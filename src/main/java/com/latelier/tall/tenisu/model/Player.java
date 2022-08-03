@@ -84,6 +84,7 @@ public class Player {
         this.points = points;
     }
     private int weight;
+
     public int getWeight() {
         return weight;
     }

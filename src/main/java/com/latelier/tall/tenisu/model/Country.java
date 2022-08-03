@@ -1,13 +1,9 @@
 package com.latelier.tall.tenisu.model;
 
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Table;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 @Table(name = "countries")
@@ -15,6 +11,14 @@ public class Country {
     @Id
     private String code;
     private String picture;
+
+    public Country() {
+    }
+
+    public Country(String code, String picture) {
+        this.code = code;
+        this.picture = picture;
+    }
 
     public String getCode() {
         return code;
