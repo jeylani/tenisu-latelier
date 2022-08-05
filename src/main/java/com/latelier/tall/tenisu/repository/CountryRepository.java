@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.latelier.tall.tenisu.model.Country;
 
 @Repository
-public interface CountryRepository extends JpaRepository<Country, String> {}
+public interface CountryRepository extends JpaRepository<Country, String> {
+    
+}
