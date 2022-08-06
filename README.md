@@ -96,3 +96,4 @@ Ex:
 ```
 - **GET /api/players/{id}**
 - **GET /api/players/avg-imc**
+- **GET /api/countries/top**
