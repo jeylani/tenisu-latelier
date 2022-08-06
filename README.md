@@ -5,7 +5,7 @@ Elle est developpée avec **Spring Boot** et les donnees sont stockée dans **Po
 L'application est conteneurisée avec **Docker**\
 Elle peut etre demarrée en local avec **docker build/docker run**.\
 Pour notre cas nous l'avons deploy dans **Amazon ECS**, l'url est:\
-**http://ec2-54-229-16-168.eu-west-1.compute.amazonaws.com:8080/api/players**
+**https://tenisu-latelier-dczhlvnvmq-uc.a.run.app**
 ## Utilisation
 Les methodes WS disponibles sont:
 - **POST /api/countries**
