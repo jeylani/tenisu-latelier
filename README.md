@@ -4,7 +4,8 @@ Elle est developpée avec **Spring Boot** et les donnees sont stockée dans **Po
 ## Demarrage
 L'application est conteneurisée avec **Docker**\
 Elle peut etre demarrée en local avec **docker build/docker run**.\
-Pour notre cas nous l'avons deploy dans **Amazon ECS**, l'url est!
+Pour notre cas nous l'avons deploy dans **Amazon ECS**, l'url est:\
+**http://ec2-54-229-16-168.eu-west-1.compute.amazonaws.com:8080/api/players**
 ## Utilisation
 Les methodes WS disponibles sont:
 - **POST /api/countries**
@@ -94,3 +95,4 @@ Ex:
 ]
 ```
 - **GET /api/players/{id}**
+- **GET /api/players/avg-imc**
