@@ -1,6 +1,8 @@
 package com.latelier.tall.tenisu.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
@@ -63,15 +65,16 @@ public class TenisuController {
     }
 
     @GetMapping("/players/avg-imc")
-    public Object getAvgImc()
+    public Map<String, Float> getAvgImc()
     {
-        Object obj = null;
-        List<Object[]> list = playerRepository.getAvgImc();
-        if(!list.isEmpty() && list.get(0).length > 0){
-            obj = list.get(0)[0];
-        }
+        Map<String, Float> map = new HashMap<>();
+        map.put("imc", playerRepository.getAvgImc());
+        return map;
+    }
 
-        return obj;
+    @GetMapping("/countries/top")
+    public List<Country> getTopCountries(){
+        return (List<Country>) countryRepository.getTopCountries();
     }
 
     @ExceptionHandler({ Exception.class })
